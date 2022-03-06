@@ -109,7 +109,7 @@ border: 4px solid hsl(0, 0%, 10%);
     border: 1px solid var(--filter-tag-c);
     color: var(--filter-tag-c);
     background-color: var(--filter-tag-bg);
-    margin: 13px 8px;
+    margin: 6px 8px;
     border-radius: 2px;
     height: 30px;
     cursor: pointer; 
@@ -174,10 +174,11 @@ border: 4px solid hsl(0, 0%, 10%);
 
 .card-tag{
     padding: 0px 8px;
-    border: 1px solid var(--body-c);
+    border: 1px solid white;
     margin: 4px;
     height: 30px;
     border-radius: 2px;
+    color: white;
 }
 
 .card-description{

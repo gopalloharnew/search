@@ -1,46 +1,47 @@
 // Array for card data
 const myCardArray = [
   {
-    cardTitle: "Title",
-    cardLink: "#",
-    cardTags: ["HTML", "CSS"],
+    cardTitle: "Youtube",
+    cardLink: "https://youtube.com",
+    cardTags: ["Youtube", "Video", "Social Media", "Google"],
     cardDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, commodi.",
+      `YouTube is an American online video sharing and social media platform owned by Google. It was launched on February 14, 2005, by Steve Chen, Chad Hurley, and Jawed Karim. It is the second most visited website, right after Google itself.`,
     card: null,
     searchable: true,
   },
   {
-    cardTitle: "HTML tag card",
-    cardLink: "https://youtube.com",
-    cardTags: ["HTML"],
-    cardDescription: "Another Card",
+    cardTitle: "Instagram",
+    cardLink: "https://instagram.com",
+    cardTags: ["Instagram", "Social Media", "Facebook Inc", "Meta Platforms Inc"],
+    cardDescription: `Instagram is an American photo and video sharing social networking service founded by Kevin Systrom and Mike Krieger. In April 2012, Facebook Inc. acquired the service for approximately US$1 billion in cash and stock`,
     card: null,
     searchable: true,
   },
   {
-    cardTitle: "CSS tag Card",
-    cardLink: "https://youtube.com",
-    cardTags: ["He"],
-    cardDescription: "Another Card",
+    cardTitle: "Facebook",
+    cardLink: "https://facebook.com",
+    cardTags: ["Facebook", "Facebook Inc", "Social Media", "Meta Platforms Inc"],
+    cardDescription: `Meta Platforms Inc., doing business as Meta and formerly known as Facebook Inc, is an American multinational technology conglomerate based in Menlo Park, California. The company is the parent organization of Facebook, Instagram, and WhatsApp, among other subsidiaries.`,
     card: null,
     searchable: true,
   },
   {
-    cardTitle: "The Javascript tag",
-    cardLink: "https://youtube.com",
-    cardTags: [],
-    cardDescription: "Another Card",
+    cardTitle: "WhatsApp",
+    cardLink: "https://whatsApp.com",
+    cardTags: ["WhatsApp", "Social Media", "Meta Platforms Inc", "Facebook Inc"],
+    cardDescription: `WhatsApp Messenger, or simply WhatsApp, is an internationally available American freeware, cross-platform centralized instant messaging and voice-over-IP service owned by Meta Platforms.`,
     card: null,
     searchable: true,
   },
   {
-    cardTitle: "No tag card",
-    cardLink: "https://youtube.com",
-    cardTags: ["javascript"],
-    cardDescription: "Another Card",
+    cardTitle: "WhatsApp",
+    cardLink: "https://whatsApp.com",
+    cardTags: ["Google", "Search Engine"],
+    cardDescription: `Google LLC is an American multinational technology company that specializes in Internet-related services and products, which include a search engine, online advertising technologies, cloud computing, software, and hardware.`,
     card: null,
     searchable: true,
   },
+  
 ];
 
 // Constants
