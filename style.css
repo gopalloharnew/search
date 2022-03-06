@@ -12,6 +12,23 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+::-webkit-scrollbar {
+width: 16px;
+height: 16px;
+}
+
+::-webkit-scrollbar-track {
+background-color: hsl(210, 15%, 10%);
+}
+
+::-webkit-scrollbar-thumb {
+background-color: hsl(0, 0%, 30%);
+border-radius: 8px;
+border: 4px solid hsl(0, 0%, 10%);
+}
+
+
+
 .flex{
     display: flex;
     align-items: center;
@@ -33,7 +50,7 @@ body{
 #search{
     background-color: hsl(210, 15%, 10%);
     color: white;
-    border: 2px solid hsl(200, 100%, 20%);
+    border: 2px solid hsl(200, 0%, 40%);
     margin: 0px 8px;
     padding: 0px 8px;
     border-radius: 2px;
@@ -44,7 +61,7 @@ body{
 }
 
 #search:focus{
-    border: 2px solid hsl(200, 100%, 30%);
+    border: 2px solid hsl(200, 0%, 60%);
 }
 
 
@@ -65,7 +82,14 @@ body{
     margin: 4px;
     border-radius: 2px;
     height: 30px;
-    cursor: pointer;
+    cursor: pointer; 
+}
+
+.search-tag-wraper:first-of-type{
+    margin-left: 0px;
+}
+.search-tag-wraper:last-of-type{
+    margin-right: 0px;
 }
 
 .search-tag-number{
@@ -76,35 +100,43 @@ body{
     padding: 0px 4px;
 }
 
-.result-container{
+.card-container{
     width: 100%;
     height: max-content;
     padding: 20px;
 }
 
-.result-box{
+.card-box{
     width: 50vw;
-    border: 2px solid hsl(0, 0%, 20%);
-    border-radius: 2px;
-    padding: 8px;
     margin: 15px 0px;
+    padding: 8px;
+    border-radius: 4px;
+    background-color:  hsl(210, 15%, 15%);
 }
 
-.result-title{
+.card-title{
     font-size: 1.5em;
     padding: 8px 0px;
-    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-decoration: underline;
+    text-decoration-color: transparent;
     color: white;
 }
 
-.result-tag-box{
+.card-title:hover{
+    text-decoration: unberline;
+    text-decoration-color: white;
+}
+
+.card-tag-box{
     list-style: none;
     min-height: 40px;
     flex-wrap: wrap;
     padding: 8px 0px;
 }
 
-.result-tag{
+.card-tag{
     padding: 0px 8px;
     border: 1px solid white;
     margin: 4px;
@@ -112,7 +144,29 @@ body{
     border-radius: 2px;
 }
 
-.result-description{
+.card-description{
     padding: 8px 0px;
     text-align: justify;
+    color: hsl(0, 0%, 80%);
+}
+
+.card-link{
+    height: 40px;
+    padding: 0px 8px;
+    color: white;
+    width: max-content;
+}
+
+.card-link:hover{
+    color: hsl(0, 0%, 80%);
+}
+
+.hide{
+    display: none;
+}
+
+.text{
+    background-color: red;
+    height: 100px;
+    width: 100px;
 }
