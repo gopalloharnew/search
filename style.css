@@ -1,9 +1,15 @@
+/* Basics */
 :root{
     --body-bg:hsl(210, 15%, 10%);
     --body-c: hsl(210, 15%, 80%);
     --main-w: 90vw;
     --main-max-w: 768px;
     --accent: hsl(200, 100%, 50%);
+}
+
+html{
+    overflow: scroll;
+    scroll-behavior: smooth;
 }
 
 *, *::before ,*::after{
@@ -21,6 +27,8 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* scrollbar */
+
 ::-webkit-scrollbar {
 width: 16px;
 height: 16px;
@@ -36,7 +44,7 @@ border-radius: 8px;
 border: 4px solid hsl(0, 0%, 10%);
 }
 
-
+/* Utility classes */
 
 .flex{
     display: flex;
@@ -55,6 +63,8 @@ border: 4px solid hsl(0, 0%, 10%);
     width: 100%;
     height: 100px;
 }
+
+/* Searchbox */
 
 #search{
     background-color: var(--body-bg);
@@ -77,6 +87,8 @@ border: 4px solid hsl(0, 0%, 10%);
     border: 2px solid var(--accent);
 }
 
+
+/* Filterbox */
 
 .filter-box-wraper{
     width: 100%;
@@ -120,6 +132,8 @@ border: 4px solid hsl(0, 0%, 10%);
     height: 100%;
     padding: 0px 4px;
 }
+
+/* Cardbox */
 
 .card-container{
     width: 100%;
@@ -182,6 +196,8 @@ border: 4px solid hsl(0, 0%, 10%);
 .card-link:hover{
     color: var(--accent);
 }
+
+/* hide */
 
 .hide{
     display: none;

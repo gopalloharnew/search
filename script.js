@@ -1,3 +1,4 @@
+// Array for card data
 const myCardArray = [
   {
     cardTitle: "Title",
@@ -42,6 +43,8 @@ const myCardArray = [
   },
 ];
 
+// Constants
+
 const search = document.querySelector("#search");
 const mycardTemplet = document.querySelector(".mycard-templet");
 const cardContainer = document.querySelector(".card-container");
@@ -63,24 +66,25 @@ function populateCards(cardArray){
     cardTemplet.querySelector(".card-title").textContent = cardInfo.cardTitle;
     cardTemplet.querySelector(".card-title").href = cardInfo.cardLink;
     cardTemplet.dataset.searchable = true;
+    cardTemplet.querySelector(".card-description").textContent = cardInfo.cardDescription;
+    cardTemplet.querySelector(".card-link").href = cardInfo.cardLink;
 
+    // adding tags to card with cardArray
     for (const cardTag of cardInfo.cardTags) {      
       let cardTagLi = document.createElement("li");
       cardTagLi.classList.add("card-tag", "flex", "center");
       cardTagLi.innerHTML = cardTag;
       cardTemplet.querySelector(".card-tag-box").append(cardTagLi);
     }
-
-    cardTemplet.querySelector(".card-description").textContent =
-      cardInfo.cardDescription;
-    cardTemplet.querySelector(".card-link").href = cardInfo.cardLink;
-
+    
     //appending the card made above with cardArray
     cardContainer.append(cardTemplet);
     cardInfo.card = cardTemplet;
   }
 }
 
+
+// save info about tags present in the page
 function collectFilterTags(cardArray){
   for (let i = 0; i < cardArray.length; i++) {
     const cardInfo = cardArray[i];
@@ -108,6 +112,8 @@ function populateFilterTags(){
   filterBox.innerHTML = "";
   for (let i = 0; i < tagsArray.length; i++) {
     const tagInfo = tagsArray[i];
+
+    // creating filterButtons from tagsArray
     const myfilterTagTemplate = filterTagTemplate.content.cloneNode(true).children[0];
     myfilterTagTemplate.querySelector(".filter-tag").innerHTML = tagInfo.tagname
     myfilterTagTemplate.querySelector(".filter-tag-number").innerHTML = tagInfo.tagnumber
@@ -119,15 +125,21 @@ function populateFilterTags(){
       }
       applyFilter()
     })
+
+    // appending filterButtons to filterBox
     filterBox.append(myfilterTagTemplate)
   }
 }
 
+// Functionality of filters
 function applyFilter(){
+  // hide every card and make them unsearchable
   myCardArray.forEach(card=>{
     card.card.classList.add("hide");
     card.card.dataset.searchable = "false";
   })
+
+  // if there is filter then show cards which fits to filter
   let filterTags = [...document.querySelectorAll(`[data-filter-tag-active]`)];
   let isAnyFilter = false;
   for (let k = 0; k < filterTags.length; k++) {
@@ -142,6 +154,8 @@ function applyFilter(){
       tagsArray.tagLocations
     }
   }
+
+  // if no filter show all cards and make them searchable
   if(!isAnyFilter){
     myCardArray.forEach(card=>{
       card.card.classList.remove("hide");
@@ -150,6 +164,7 @@ function applyFilter(){
   }
 }
 
+// logic for search
 function searchFunc(cardArray){
   search.addEventListener("input", ()=>{
     val = search.value.toLowerCase().trim();
