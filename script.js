@@ -42,5 +42,13 @@ for (let i = 0; i < cardArray.length; i++) {
 
 search.addEventListener("input", ()=>{
     let inputVal = search.value.trim().toLowerCase();
+    for (let j = 0; j < cardArray.length; j++) {
+        const cardInfo = cardArray[j];
+        let isMatch = cardInfo.cardTitle.trim().toLocaleLowerCase().includes(inputVal)||
+            cardInfo.cardDescription.trim().toLocaleLowerCase().includes(inputVal);
+        cardInfo.card.classList.toggle("hide", !isMatch);
+            
+       
+    }
 })
 
