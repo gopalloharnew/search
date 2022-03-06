@@ -6,15 +6,31 @@ const cardArray = [
     cardDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, commodi.",
     card: null,
-    isFiltered: true,
+    searchable: true,
   },
   {
-    cardTitle: "New Card",
+    cardTitle: "HTML tag card",
+    cardLink: "https://youtube.com",
+    cardTags: ["HTML"],
+    cardDescription: "Another Card",
+    card: null,
+    searchable: true,
+  },
+  {
+    cardTitle: "CSS tag Card",
     cardLink: "https://youtube.com",
     cardTags: ["CSS"],
     cardDescription: "Another Card",
     card: null,
-    isFiltered: true,
+    searchable: true,
+  },
+  {
+    cardTitle: "No tag card",
+    cardLink: "https://youtube.com",
+    cardTags: [],
+    cardDescription: "Another Card",
+    card: null,
+    searchable: true,
   },
 ];
 
